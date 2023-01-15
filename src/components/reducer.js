@@ -1,9 +1,10 @@
 export const initialState = {
+  authInfo:{},
   cartList:[],
   productList:[{
     title: 'The Psychology of Money .',
     price: '240',
-    rating: '4',
+    rating: '1',
     imageURL: 'https://m.media-amazon.com/images/I/71g2ednj0JL._AC_SY400_.jpg'
   },
   {
@@ -15,7 +16,7 @@ export const initialState = {
   {
     title: 'Atomic Habits the life changing books by james clear.',
     price: '300',
-    rating: '4',
+    rating: '2',
     imageURL: 'https://m.media-amazon.com/images/I/91bYsX41DVL._AC_SY400_.jpg.jpg'
   },
   {
@@ -33,25 +34,25 @@ export const initialState = {
   {
     title: 'Grandma Bag of Stories [Paperback] Sudha Murty',
     price: '400',
-    rating: '4',
+    rating: '5',
     imageURL: 'https://m.media-amazon.com/images/I/81jv44QdNwL._AC_SY400_.jpg'
   },
   {
     title: 'Word Power Made Easy By Norman Lewis',
     price: '379',
-    rating: '4',
+    rating: '2',
     imageURL: 'https://m.media-amazon.com/images/I/818e+fq7+BL._AC_SY400_.jpg'
   },
   {
     title: 'The Power of Your Subconscious Mind ',
     price: '500',
-    rating: '4',
+    rating: '2',
     imageURL: 'https://m.media-amazon.com/images/I/71sBtM3Yi5L._AC_SY400_.jpg'
   },
   {
     title: 'Attitude Is Everything: Change Your Attitude ... Change Your Life!',
     price: '429',
-    rating: '4',
+    rating: '3',
     imageURL: 'https://m.media-amazon.com/images/I/710jnzKlDTL._AC_SY400_.jpg'
   }]
 };
@@ -68,6 +69,11 @@ export const reducer = (state, action) => {
         ...state, 
         cartList: state.cartList.filter(item => item.id !== action.payload)
       };
+    case 'SIGN_IN':
+      return{
+        ...state,
+        authInfo:action.payload
+      }
     default:
       return state;
   }

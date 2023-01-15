@@ -1,10 +1,6 @@
 import './ProductList.css';
 import { useStateValue } from './StateProvider';
 import Card from './Card';
-
-
-
-
 const ProductList = () => {
   const { initialState } = useStateValue();
   return(
