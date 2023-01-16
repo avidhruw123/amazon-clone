@@ -8,7 +8,7 @@ import { useStateValue } from './StateProvider';
 
 const Login = () => {
   const navigate = useNavigate();
-  const app = initializeApp(firebaseConfig);
+   initializeApp(firebaseConfig);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const auth = getAuth();

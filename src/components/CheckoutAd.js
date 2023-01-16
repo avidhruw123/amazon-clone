@@ -25,7 +25,7 @@ const CheckoutAd = () => {
       <div className="rightSide">
         <div className="subtotal">
           <p>Subtotal({getTotalItem()} items): <strong>₹{getTotalAmount()}</strong></p>
-          <p><input type="checkbox"/>This order contains a gift</p>
+          {/* <p><input type="checkbox"/>This order contains a gift</p> */}
           <button>Proceed to Checkout</button>
         </div>
       </div>
