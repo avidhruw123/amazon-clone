@@ -5,7 +5,7 @@ export const StateContext = createContext();
 
 export const StateProvider = ({ reducer, initialState, children }) => (
   <StateContext.Provider value={{ myReducer: useReducer(reducer, initialState), initialState}}>
-    { children }
+    {children}
   </StateContext.Provider>
 );
 

@@ -20,7 +20,7 @@
 .header__logo {
   display: flex;
   align-items: center;
-  margin: 0 25px;
+  margin: 0 10px;
 }
 .header__logo svg {
   color: #ff9f00;
@@ -30,6 +30,12 @@
   font-weight: bold;
   color: white;
 }
+
+.logo{
+ 
+  width: 100px;
+}
+
 .header__search {
   display: flex;
   flex: 1;
@@ -45,6 +51,7 @@
 .header__searchIcon {
   background-color: #ff9f00;
   padding: 8px;
+  margin-top: 5.5px;
   color: black;
 }
 .header__nav {

@@ -2,10 +2,12 @@ import './CheckoutAd.css';
 import { useStateValue } from './StateProvider';
 
 const CheckoutAd = () => {
+  
   const { myReducer } = useStateValue();
   const [ data ] = myReducer;
 
   const getTotalAmount = () => {
+
     let total = 0;
     data.cartList.map(item =>{
       return total = Number(total) + Number(item.price);
@@ -24,8 +26,8 @@ const CheckoutAd = () => {
       </div>
       <div className="rightSide">
         <div className="subtotal">
+
           <p>Subtotal({getTotalItem()} items): <strong>₹{getTotalAmount()}</strong></p>
-          {/* <p><input type="checkbox"/>This order contains a gift</p> */}
           <button>Proceed to Checkout</button>
         </div>
       </div>

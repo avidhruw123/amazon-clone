@@ -6,11 +6,16 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 import { useNavigate } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 
+
 const Login = () => {
+  
   const navigate = useNavigate();
+  
    initializeApp(firebaseConfig);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
   const auth = getAuth();
   const { myReducer } = useStateValue();
   const [, dispatch ] = myReducer;
@@ -56,6 +61,7 @@ const Login = () => {
       </label>
       <br/>
       <button onClick={signIn}>Login</button>
+      
       <hr/>
       <h1>Don't have account</h1>
       <button onClick={register}>Sign Up</button>

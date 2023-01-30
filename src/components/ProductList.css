@@ -6,6 +6,8 @@
   position: relative;
   padding: 1rem;
   background: linear-gradient(0deg, #ccc 85%, transparent);
+  
+
 }
 .productList::after {
   display: block;

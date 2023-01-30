@@ -1,17 +1,19 @@
 import './ShoppingBasket.css';
 import { useStateValue } from './StateProvider';
 import Rating from './Rating';
+
 const ShoppingBasket = () => {
+
   const { myReducer } = useStateValue();
   const [ data, dispatch ] = myReducer;
 
   const removeFromCart = (id) => {
     dispatch({
       type:'REMOVE_FROM_CART',
-      payload:id
+      payload: id
     })
   }
-  
+
   return(
     <div className="shoppingBasket">
       <h2>Your Shopping Basket</h2>
@@ -26,6 +28,7 @@ const ShoppingBasket = () => {
               <div>{item.title}</div>
               <p><strong>₹{item.price}</strong></p>
               <div><Rating rate={item.rating}/></div>
+             
               <button onClick={()=>removeFromCart(item.id)}>Remove from Cart</button>
             </div>
           </li>))

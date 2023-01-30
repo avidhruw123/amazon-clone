@@ -1,12 +1,15 @@
 import React from "react"
 import './Header.css';
-import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+// import AddBusinessIcon from '@mui/icons-material/AddBusiness';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom';
 import { useStateValue } from "./StateProvider";
+import Logout from './Logout';
+
 
 const Header = () => {
+   
   const { myReducer } = useStateValue();
   const [ data ] = myReducer;
   
@@ -17,9 +20,8 @@ const Header = () => {
   return(
     <header className="header">
       <div className="header__logo">
-        <Link to="/">
-          <AddBusinessIcon fontSize="large"/>&nbsp;
-          <span className="header__logoName">Amazon</span>
+        <Link to="/">          
+          <img src="https://pngimg.com/d/amazon_PNG25.png" className="logo" alt="" ></img>
         </Link>
       </div>
       <div className="header__search">
@@ -30,7 +32,7 @@ const Header = () => {
       <Link to='/login'>
           <div className="header__nav__user">
             <span className="header__nav__lineOne">{data.authInfo.user ? data.authInfo.user.email:'Hello Guest'}</span>
-            <span className="header__nav__lineTwo">{data.authInfo.user ? 'logout' : 'login'}</span>
+            <span className="header__nav__lineTwo">{data.authInfo.user ? <Logout/> : 'login'}</span>
           </div>
         </Link>
         <div className="header__nav__itemBasket">

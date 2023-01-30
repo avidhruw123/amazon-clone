@@ -1,0 +1,20 @@
+button{
+    border: 0px;
+    border-radius: 4px;  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);     
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+}
+
+.card{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);  
+    border-radius: 3px;
+}
+.title{
+    font-weight: 450;
+}
+
+.price{
+    font-weight: 300;
+    font-size: larger;
+}
+

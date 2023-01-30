@@ -6,6 +6,8 @@ import CheckoutAd from "./components/CheckoutAd";
 import ShoppingBasket from "./components/ShoppingBasket";
 import React from "react";
 import Login from "./components/Login";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
             <Header/>
             <Banner/>
             <ProductList/>
+            <Footer/>
           </React.Fragment>
         }/>
         <Route exact path='/checkout' element={
@@ -25,7 +28,7 @@ function App() {
             <ShoppingBasket/>
           </React.Fragment>
         } />
-        <Route exact path='/login' element={
+        <Route exact path='/login' element = {
           <Login />
         } />
       </Routes>
