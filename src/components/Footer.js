@@ -49,7 +49,13 @@ const Footer = () => {
                 <div className='f'>Help</div>
             </div>
         </div>
-        <div className='copyright'>© 1996-2023, Amazon.com, Inc. or its affiliates</div>
+        <div>
+        <div className='footer__logo'><img src="https://pngimg.com/d/amazon_PNG25.png" className="logo" alt="" /></div>
+          <div className='copyright'>© 1996-2023, Amazon.com, Inc. or its affiliates</div>
+         
+        </div>
+        
+
     </footer>
   )
 };

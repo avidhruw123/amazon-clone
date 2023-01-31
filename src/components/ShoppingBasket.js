@@ -1,7 +1,7 @@
 import './ShoppingBasket.css';
 import { useStateValue } from './StateProvider';
 import Rating from './Rating';
-
+import Footer from './Footer';
 const ShoppingBasket = () => {
 
   const { myReducer } = useStateValue();
@@ -15,6 +15,7 @@ const ShoppingBasket = () => {
   }
 
   return(
+    <>
     <div className="shoppingBasket">
       <h2>Your Shopping Basket</h2>
       <hr/>
@@ -34,7 +35,14 @@ const ShoppingBasket = () => {
           </li>))
         }
       </ul>
+      
+      
+      
+      
     </div>
+    
+    <Footer/>
+    </>
   )
 }
 
